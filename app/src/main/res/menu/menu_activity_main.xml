@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.koretsky.crammer.MainActivity">
+    <item
+        android:id="@+id/newPackage"
+        android:icon="@drawable/ic_create_package"
+        android:title="@string/newPackage"
+        android:titleCondensed="@string/newPackage"
+        app:showAsAction="always|withText" />
+</menu>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.koretsky.crammer.MainActivity">
+    <item
+        android:id="@+id/addItem"
+        android:icon="@drawable/ic_modify_additem"
+        app:showAsAction="always|withText"
+        android:title=""></item>
+    <item
+        android:id="@+id/itemsAdded"
+        android:icon="@drawable/ic_finish_creating_package"
+        app:showAsAction="always|withText"
+        android:title=""></item>
+</menu>

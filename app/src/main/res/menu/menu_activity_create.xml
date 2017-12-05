@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.koretsky.crammer.MainActivity">
+    <item
+        android:id="@+id/finishCreatingPackage"
+        app:showAsAction="always|withText"
+        android:icon="@drawable/ic_finish_creating_package"
+        android:title="@string/finishCreatingPackage"
+        android:titleCondensed="@string/small_finishCreatingPackage"></item>
+</menu>
