@@ -150,7 +150,7 @@ public class ReviewActivity extends AppCompatActivity implements View.OnClickLis
                     Toast.makeText(this, "Select your mark", Toast.LENGTH_SHORT).show();
                     break;
                 }
-                if (ratingBar.getRating() < 4.0) badMarkedItems.add(item);
+                if (ratingBar.getRating() < 3.0) badMarkedItems.add(item);
                 Log.d("Rating", String.valueOf(ratingBar.getRating()));
                 p.OnItemReviewed(item, (int) ratingBar.getRating());
                 prepareItem();

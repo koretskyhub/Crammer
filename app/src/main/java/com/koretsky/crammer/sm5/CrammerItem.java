@@ -22,7 +22,6 @@ public class CrammerItem implements Serializable, Comparable<CrammerItem> {
         value = v;
         answer = a;
         averageMark = (float) 2.5;
-        eFactor = (float) 2.5;
         timesRepeated = 0;
         repInterval = 1;
         nextRepDate = new Date();
@@ -50,7 +49,7 @@ public class CrammerItem implements Serializable, Comparable<CrammerItem> {
         return name.equals(this.value);
     }
 
-    protected float modifyEfactor(int mark) {
+    protected float modifyEfactor(float mark) {
         averageMark = (float) ((averageMark * (timesRepeated - 1) / timesRepeated) + (mark / timesRepeated));
         if (mark < 3) {
             timesRepeated = 0;

@@ -88,13 +88,13 @@ public class Package implements Serializable {
         return item.setInterval((int) optimalFactor * item.getInterval());
     }
 
-    private void modifyMatrix(CrammerItem item, int mark) {
+    private void modifyMatrix(CrammerItem item, float mark) {
         this.optimalFactorMatrix.get(item.getEFactorForMatrix()).set(item.getTimesRepeated(),
                 (float) ((this.optimalFactorMatrix.get(item.getEFactorForMatrix()).get(item.getTimesRepeated()))
                         * (1 - 0.9 * (0.72 + (mark * 0.07) - 1))));
     }
 
-    public void OnItemReviewed(CrammerItem item, int mark) {
+    public void OnItemReviewed(CrammerItem item, float mark) {
         item.incTimesRep();
         item.modifyEfactor(mark);
         this.modifyMatrix(item, mark);
