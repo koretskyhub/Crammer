@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Crammer</string>
+    <string name="newPackage">New pack</string>
+    <string name="tvAddPackage">Enter package name</string>
+    <string name="tvCreate">Create</string>
+    <string name="tvEnterPackageName">Enter package name</string>
+    <string name="tvEnterItemValue">Enter item value</string>
+    <string name="tvEnterItemAnswer">If it necessary, type answer</string>
+    <string name="tvAddItem">Add item</string>
+    <string name="finishCreatingPackage">Finish creating</string>
+    <string name="small_finishCreatingPackage">new pack</string>
+    <string name="addItem">Add item</string>
+    <string name="newPackageName">Type here new name</string>
+    <string name="renamingPackage">Renaming package</string>
+    <string name="nextItem">Next item</string>
+    <string name="tapToView">Tap here to view answer</string>
+    <string name="mainListHeader">The list of your packages:</string>
+    <string name="tvModify">The list of items:</string>
+    <string name="helpMarking">\t5 - perfect response\n\n
+        \t4 - correct response after a hesitation\n\n
+        \t3 - correct response recalled with serious \n\tdifficulty\n\n
+        \t2 - incorrect response; where the correct \n\tone seemed easy to recall\n\n
+        \t1 - incorrect response; the correct one \n\tremembered\n\n
+        \t0 - complete blackout\n</string>
 </resources>
