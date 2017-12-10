@@ -62,6 +62,7 @@ public class Package implements Serializable {
         Package pack = (Package) is.readObject();
         is.close();
         storageInStream.close();
+        pack.shouldRepeatDate = pack.itemsTree.first().getNextRepDate();
         return pack;
     }
 
@@ -117,7 +118,7 @@ public class Package implements Serializable {
             DateFormat shortFormat = new SimpleDateFormat("EEE, d MMM");
             map.put("value", tree.get(i).getValue());
             map.put("answer", tree.get(i).getAnswer());
-            map.put("info", "Rounded mark: " + Math.round(tree.get(i).getAverageMark()) + ", next review: " + shortFormat.format(shouldRepeatDate).toString());
+            map.put("info", "Rounded mark: " + Math.round(tree.get(i).getAverageMark()) + ", next review: " + shortFormat.format(tree.get(i).getNextRepDate()).toString());
             list.add(map);
         }
         return list;

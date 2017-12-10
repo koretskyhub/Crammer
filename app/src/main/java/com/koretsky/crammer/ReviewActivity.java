@@ -86,8 +86,16 @@ public class ReviewActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     protected void onPause() {
+        String ss = getIntent().getStringExtra("packagePath");
         try {
-            new File(getFilesDir(), getIntent().getStringExtra("packagePath")).delete();
+            String[] l = getFilesDir().list();
+            for (String s : l
+                    ) {
+                if (s.contains(ss)) {
+                    new File(getFilesDir(), s).delete();
+                }
+
+            }
             p.serializePackage();
         } catch (Exception e) {
             e.printStackTrace();

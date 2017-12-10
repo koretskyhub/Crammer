@@ -42,7 +42,7 @@ public class CrammerItem implements Serializable, Comparable<CrammerItem> {
     }
 
     protected void syncNextRepDate() {
-        this.nextRepDate.setTime((repInterval * 86400000) + nextRepDate.getTime());
+        this.nextRepDate.setTime((repInterval * 86400000) + new Date().getTime());
     }
 
     protected boolean cmprName(String name) {

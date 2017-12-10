@@ -3,9 +3,9 @@ package com.koretsky.crammer;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                return leftDate.compareTo(rightDate); // use your logic
+                return leftDate.compareTo(rightDate);
             }
         };
         if (!packageList.isEmpty()) {
