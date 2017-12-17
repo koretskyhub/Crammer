@@ -63,15 +63,20 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
                 if (et.getText().toString().isEmpty()) {
                     Toast.makeText(this, "The name is empty!", Toast.LENGTH_LONG).show();
                 } else {
-                    try {
-                        p = new Package(et.getText().toString());
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    if (et.getText().toString().contains("/") || et.getText().toString().contains("."))
+                        Toast.makeText(this, "The name shall not contain characters: \"/\" or \".\" !", Toast.LENGTH_LONG).show();
+                    else {
+                        try {
+                            p = new Package(et.getText().toString());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        setContentView(R.layout.add_item);
+                        btnAddItem = (Button) findViewById(R.id.btnAddItem);
+                        btnAddItem.setOnClickListener(this);
                     }
-                    setContentView(R.layout.add_item);
-                    btnAddItem = (Button) findViewById(R.id.btnAddItem);
-                    btnAddItem.setOnClickListener(this);
                 }
+
                 break;
             case (R.id.btnAddItem):
                 et = (EditText) findViewById(R.id.itemValue);
