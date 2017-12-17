@@ -1,4 +1,4 @@
-package com.koretsky.crammer;
+package com.koretsky.crammer.Forms;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.koretsky.crammer.R;
 import com.koretsky.crammer.sm5.Package;
 
 import java.io.File;
@@ -103,7 +104,7 @@ public class ModifyActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onStart() {
         itemsLV = (ListView) findViewById(R.id.itemsLV);
-        SimpleAdapter adapter = new SimpleAdapter(this, p.getItemsArrayList(),
+        SimpleAdapter adapter = new SimpleAdapter(this, p.getItemsMapsArrayList(),
                 android.R.layout.simple_list_item_2,
                 new String[]{"value", "info"},
                 new int[]{android.R.id.text1, android.R.id.text2});

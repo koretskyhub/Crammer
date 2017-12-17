@@ -1,4 +1,4 @@
-package com.koretsky.crammer;
+package com.koretsky.crammer.Forms;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.koretsky.crammer.R;
 import com.koretsky.crammer.sm5.Package;
 
 import java.io.File;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                return leftDate.compareTo(rightDate);
+                return rightDate.compareTo(leftDate);
             }
         };
         if (!packageList.isEmpty()) {

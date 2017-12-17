@@ -9,7 +9,7 @@ import java.util.Date;
  * Created by Михаил on 28.11.2017.
  */
 
-public class CrammerItem implements Serializable, Comparable<CrammerItem> {
+public class Item implements Serializable, Comparable<Item> {
     private String value;
     private String answer;
     private float eFactor;
@@ -18,12 +18,12 @@ public class CrammerItem implements Serializable, Comparable<CrammerItem> {
     private int repInterval;
     private Date nextRepDate;
 
-    public CrammerItem(String v, String a) {
+    public Item(String v, String a) {
         value = v;
         answer = a;
         averageMark = (float) 2.5;
         timesRepeated = 0;
-        repInterval = 1;
+        repInterval = 4;
         nextRepDate = new Date();
         this.syncNextRepDate();
 
@@ -36,6 +36,24 @@ public class CrammerItem implements Serializable, Comparable<CrammerItem> {
     public String getValue() {
         return value;
     }
+
+    public int getInterval() {
+        return this.repInterval;
+    }
+
+    @Override
+    public int compareTo(@NonNull Item crammerItem) {
+        return this.getNextRepDate().compareTo(crammerItem.getNextRepDate());
+    }
+
+    public int getEFactorForMatrix() {
+        return (int) (this.eFactor * 10);
+    }
+
+    public int getTimesRepeated() {
+        return (int) this.timesRepeated;
+    }
+
 
     protected Date getNextRepDate() {
         return this.nextRepDate;
@@ -69,25 +87,11 @@ public class CrammerItem implements Serializable, Comparable<CrammerItem> {
         return this.timesRepeated = timesRepeated + 1;
     }
 
-    public int getEFactorForMatrix() {
-        return (int) (this.eFactor * 10);
-    }
-
-    public int getTimesRepeated() {
-        return (int) this.timesRepeated;
-    }
 
     protected int setInterval(int interval) {
         this.repInterval = interval;
         return this.repInterval;
     }
 
-    public int getInterval() {
-        return this.repInterval;
-    }
 
-    @Override
-    public int compareTo(@NonNull CrammerItem crammerItem) {
-        return this.getNextRepDate().compareTo(crammerItem.getNextRepDate());
-    }
 }

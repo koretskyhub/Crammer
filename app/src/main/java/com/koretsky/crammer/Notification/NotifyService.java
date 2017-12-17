@@ -1,4 +1,4 @@
-package com.koretsky.crammer;
+package com.koretsky.crammer.Notification;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -8,6 +8,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+
+import com.koretsky.crammer.Forms.MainActivity;
+import com.koretsky.crammer.R;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -19,11 +22,11 @@ import java.util.Date;
  * Created by Михаил on 29.11.2017.
  */
 
-public class NotifiService extends IntentService {
+public class NotifyService extends IntentService {
 
     final String LOG_TAG = "myLogs";
 
-    public NotifiService() {
+    public NotifyService() {
         super("notifyService");
     }
 

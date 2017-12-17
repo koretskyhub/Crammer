@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".NotifiService"
+            android:name=".Notification.NotifyService"
             android:exported="false">
         </service>
         <receiver
-            android:name=".setNotifyAlarmReciver"
+            android:name=".Notification.setNotifyAlarmReciver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -25,7 +25,7 @@
         </receiver>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Forms.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,17 +34,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateActivity"
+            android:name=".Forms.CreateActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ModifyActivity"
+            android:name=".Forms.ModifyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ReviewActivity"
+            android:name=".Forms.ReviewActivity"
             android:screenOrientation="portrait" />
         <activity
             android:screenOrientation="portrait"
-            android:name=".Help"
+            android:name=".Forms.Help"
             android:label="Marking rules"
             android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>

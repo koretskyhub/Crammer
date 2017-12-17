@@ -1,4 +1,4 @@
-package com.koretsky.crammer;
+package com.koretsky.crammer.Forms;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,7 +15,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.koretsky.crammer.sm5.CrammerItem;
+import com.koretsky.crammer.R;
+import com.koretsky.crammer.sm5.Item;
 import com.koretsky.crammer.sm5.Package;
 
 import java.io.File;
@@ -33,8 +34,8 @@ public class ReviewActivity extends AppCompatActivity implements View.OnClickLis
     private Button btnNextItem = null;
     private RatingBar ratingBar = null;
     private String answer = null;
-    private CrammerItem item = null;
-    private ArrayList<CrammerItem> badMarkedItems = null;
+    private Item item = null;
+    private ArrayList<Item> badMarkedItems = null;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,7 +71,7 @@ public class ReviewActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             }
         }
-        badMarkedItems = new ArrayList<CrammerItem>();
+        badMarkedItems = new ArrayList<Item>();
         iter = p.getCrammerItemsArrayList().iterator();
         iterForBadMarked = badMarkedItems.iterator();
         tvItemValue = (TextView) findViewById(R.id.tvItemValue);
@@ -105,7 +106,7 @@ public class ReviewActivity extends AppCompatActivity implements View.OnClickLis
 
     protected void prepareItem() {
         if (iter.hasNext()) {
-            item = (CrammerItem) iter.next();
+            item = (Item) iter.next();
             tvItemAnswer.setText("");
             tvItemValue.setText(item.getValue());
             ratingBar.setRating(0);
